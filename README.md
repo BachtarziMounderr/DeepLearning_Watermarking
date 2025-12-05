@@ -6,7 +6,9 @@ Course: Intelligent Techniques for Fighting Fraud and Corruption (ITFFC)
 Instructor: Dr. Bouchra Guelib  
 Student: Mounder Siradj Eddine Bachtarzi  
 Date: 2025  
-
+Reached results : -Medical invisibility: PSNR ≈ 49 dB
+                  -Watermark recovery: PSNR ≈ 40 dB, SSIM ≈ 0.82 
+                  -Retrieval accuracy: 85–90%
 ---
 
 ## Workshop Objective/Results
