@@ -9,16 +9,62 @@ Date: 2025
 
 ---
 
-## Workshop Objective
-Train participants to design and implement deep learning models for secure digital watermarking — addressing:
-- Data collection and preprocessing  
-- Dataset balancing using GANs  
-- Deep feature extraction with CNN & Transformer backbones  
-- Feature refinement using attention (CBAM)  
-- Evaluation of robustness and separability
-- Watermark Embedding & Extraction:**  
-  Incorporation of logo embeddings (as feature vectors) into medical images for robust digital watermarking.  
-  The trained or pre-extracted logo features are embedded within medical image representations, ensuring:  
-  - high imperceptibility (visual quality preserved),  
-  - resilience to noise and common image transformations,  
-  - and recoverability of the watermark features during extraction.
+## Workshop Objective/Results
+Deep Learning-Based Feature-Space Watermarking for Medical Images
+
+This project implements a complete deep-learning pipeline for secure and robust watermarking of medical images.
+It includes preprocessing, optional GAN-based augmentation, deep feature extraction, and a learnable encoder–decoder watermark embedding system.
+
+The project evaluates multiple architectures (CNN, ViT, CBAM) and shows that ResNet50 + CBAM provides the best watermark invisibility and recoverability.
+
+   Included Components
+
+Dataset preprocessing & EDA
+
+(Optional) GAN-based data augmentation
+
+Deep feature extraction using:
+
+ResNet50
+
+Vision Transformer (ViT)
+
+ResNet50 + CBAM (best-performing)
+
+Feature-space watermark embedding with:
+
+Learnable encoder for watermark injection
+
+Learnable decoder for watermark recovery
+
+Quality metrics: MSE, PSNR, SSIM
+
+Robustness evaluation: noise, scaling, distortions
+
+Watermark retrieval via cosine similarity
+
+   Key Findings
+
+ViT features are too abstract for reliable watermark recovery.
+
+ResNet50 + CBAM achieves outstanding results:
+
+Medical invisibility: PSNR ≈ 49 dB
+
+Watermark recovery: PSNR ≈ 40 dB, SSIM ≈ 0.82
+
+Robustness under attack: watermark remains identifiable
+
+Retrieval accuracy: 85–90%
+
+   What This Project Demonstrates
+
+A complete, functional pipeline for feature-space watermarking, showing how deep models can embed structured information into medical image representations while maintaining:
+
+Invisibility
+
+Recoverability
+
+Robustness
+
+This approach can be applied to medical image security, ownership protection, and integrity verification
